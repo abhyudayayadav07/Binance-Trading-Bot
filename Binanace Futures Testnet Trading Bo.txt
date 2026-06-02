@@ -1,0 +1,103 @@
+Binanace Futures Testnet Trading Bot
+
+A python based command line trading bot for binance USDT-M Futures Testnet. The application supports Market and Limit orders for BUY and SELL sides, includes input validation, structured logging, and error handling.
+
+Setup Instructions : 
+
+1. Clone respository
+
+git clone <repository-url>
+cd trading_bot
+
+2. Create Virtual Environment
+
+python -m venv venv
+
+Activate environment:
+
+Windows:
+
+venv\Scripts\activate
+
+Linux/macOS:
+
+source venv/bin/activate
+
+3. Install dependencies 
+
+python -m pip install -r requirements.txt
+
+4. Configure Binance Testnet Credentials
+
+Create a .env file in the project root:
+
+BINANCE_API_KEY=your_api_key
+
+BINANCE_API_SECRET=your_api_secret
+
+Generate API credentials from Binance Futures Testnet.
+
+RUNNING EXAMPLES :
+
+Market Buy Order
+
+python clilayer.py BTCUSDT BUY MARKET 0.001
+
+Market Sell Order 
+
+python clilayer.py BTCUSDT SELL MARKET 0.001
+
+Limit Buy Order 
+
+python clilayer.py BTCUSDT BUY LIMIT 0.001 90000
+
+Limit Sell Order 
+
+python clilayer.py BTCUSDT SELL LIMIT 0.001 120000
+
+
+
+Sample Output
+
+
+ORDER REQUEST
+-------------------------
+Symbol: BTCUSDT
+Side: BUY
+Type: MARKET
+Quantity: 0.001
+
+SUCCESS
+
+Order ID: 123456789
+Status: FILLED
+Executed Qty: 0.001
+Logging
+
+Logs are stored in:
+
+logs/trading_bot.log
+
+The log file contains:
+
+Order requests
+
+Order responses
+
+Validation errors
+
+Binance API exceptions
+
+Network failures
+
+Assumptions :
+
+Binance Futures Testnet account is active.
+
+Valid API Key and Secret are available.
+
+User has sufficient virtual balance in the Testnet account.
+
+Supported order types are MARKET and LIMIT.
+
+Internet connectivity is available during execution.

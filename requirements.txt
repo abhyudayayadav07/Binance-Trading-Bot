@@ -1,0 +1,114 @@
+For your Binance Futures Trading Bot project, the requirements are:
+
+Software Requirements :
+
+Python
+
+Python 3.10+
+
+
+Required Libraries
+
+Install:
+
+python -m pip install python-binance python-dotenv typer
+
+or
+
+python -m pip install -r requirements.txt
+
+requirements.txt
+
+python-binance==1.0.36
+
+python-dotenv
+
+typer
+
+Binance Requirements :
+
+Binance Futures Testnet Account
+
+The assignment specifically requires:
+
+Binance Futures Testnet (USDT-M)
+
+API Credentials :
+
+Create:
+
+API Key
+API Secret
+
+and store them in:
+
+BINANCE_API_KEY=your_api_key
+
+BINANCE_API_SECRET=your_api_secret
+
+inside a file named:
+
+.env
+
+Functional Requirements :
+
+The bot supports:
+
+Market Orders:
+
+python bot\clilayer.py BTCUSDT BUY MARKET 0.001
+
+Limit Orders :
+
+python bot\clilayer.py BTCUSDT SELL LIMIT 0.001 120000
+
+Features Implemented:
+
+Input Validation
+
+Symbol input
+
+BUY / SELL validation
+
+MARKET / LIMIT validation
+
+Quantity validation
+
+
+Logging :
+
+Logs stored in:
+
+logs/trading_bot.log
+
+Error Handling
+
+Handles:
+
+Invalid side
+
+Invalid order type
+
+Invalid quantity
+
+Binance API errors
+
+Authentication failures
+
+Network issues
+
+Environment Variables
+
+Required in .env:
+
+BINANCE_API_KEY=xxxxxxxx
+
+BINANCE_API_SECRET=xxxxxxxx
+
+How to Run : 
+
+From project root:
+
+cd "D:\Trading bot"
+
+python bot\clilayer.py BTCUSDT BUY MARKET 0.001
